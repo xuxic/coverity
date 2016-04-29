@@ -1,3 +1,18 @@
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "npO/41lMgwehvoB1i4Ga5tgA47mXpghrC3x9viQJ0DEfeC5Y+AwwuDeJxEbWjrZXZbnZoaBIZhW4tB35XC9+9ORAgpgkNsz4WitcijUSS9NQhd4qCaEhu40Dc2Erjgs8YLdrENAxIMfyYYheeFCvIJOhCgMFU2BiTbyXubvZI7iCt+XfjKdifPgAI7YOqISA2YvqCyP+lKeKwoBBm6zGsQrZRgOVlmMbVgvCL5OOd63r8YBuB/DQsNk4FrPq3Qoc1UbzjZVWpw7+LSN4QLU7cZn5c8w4HGL49HKvdyhx1xrGHP8Tx1mDiQZ8oFFWucS07/4ZoWRWgrC5ZNBRwJp4EUDxsRLheUCGPdGUPqyZIZ5n1JyifFZPoqURtwmJhmjbBSCwddA236nMkLhr6LezVxTk5OS/VollY44YhRnoLLgi9rhDy2YnnN2uQpU1DKIauSgJLSqjE/iUMJRe/uS5LYzdsSkBXKT110YLIun7NAC2vsK+TAdM7wJ7tmDBj5kFxfE9ZAGcG+DazCJHmmO6IHMjAzUbXE0wjdjI4UQEWIS3YvCIuVH2jKgGN1Uabc4TBk0hsQkgiIfOb7J0fYrJP2k4tcM5F8XHgHiQ+80Y5YCFh44HBcNeLeNDmf5PvMxjD9n95cdDmoO/Yq+T+ntjwqbPhuDZv0YQqb/lUm4S3Xk="
+
+addons:
+  coverity_scan:
+    project:
+      name: "xuxic/coverity"
+      description: "tera coverity"
+    notification_email: 290071060@qq.com
+    build_command_prepend: ""
+    build_command:   "sh build.sh"
+    branch_pattern: coverity_scan
 language: cpp
 compiler: gcc
 install:
